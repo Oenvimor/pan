@@ -1,0 +1,13 @@
+{"time":"2025-05-08T12:26:28.3050939+08:00","level":"ERROR","msg":"创建文件失败","err":"open /tmp/63873275692519.png: The system cannot find the path specified."}
+{"time":"2025-05-09T17:45:46.0509617+08:00","level":"ERROR","msg":"查询文件失败","err":"record not found"}
+{"time":"2025-05-09T17:45:46.061722+08:00","level":"ERROR","msg":"文件处理出错","err":"record not found"}
+{"time":"2025-05-09T17:51:23.9166276+08:00","level":"ERROR","msg":"查询文件失败","err":"record not found"}
+{"time":"2025-05-09T17:51:23.9274888+08:00","level":"ERROR","msg":"文件处理出错","err":"record not found"}
+{"time":"2025-05-09T17:55:02.6365995+08:00","level":"INFO","msg":"文件已存在，无需重复上传"}
+{"time":"2025-05-09T17:57:50.3542235+08:00","level":"INFO","msg":"文件已存在，无需重复上传"}
+{"time":"2025-05-09T20:16:47.6105701+08:00","level":"INFO","msg":"文件已存在，无需重复上传"}
+{"time":"2025-05-09T20:20:52.8839076+08:00","level":"ERROR","msg":"查询文件失败","err":"sql: Scan error on column index 7, name \"file_size\": converting driver.Value type float32 (\"2.507035e+06\") to a int64: invalid syntax"}
+{"time":"2025-05-09T20:20:52.8839076+08:00","level":"ERROR","msg":"文件处理出错","err":"sql: Scan error on column index 7, name \"file_size\": converting driver.Value type float32 (\"2.507035e+06\") to a int64: invalid syntax"}
+{"time":"2025-05-09T20:20:57.7487958+08:00","level":"ERROR","msg":"查询文件失败","err":"sql: Scan error on column index 7, name \"file_size\": converting driver.Value type float32 (\"2.507035e+06\") to a int64: invalid syntax"}
+{"time":"2025-05-09T20:20:57.7487958+08:00","level":"ERROR","msg":"文件处理出错","err":"sql: Scan error on column index 7, name \"file_size\": converting driver.Value type float32 (\"2.507035e+06\") to a int64: invalid syntax"}
+{"time":"2025-05-09T20:21:43.8806415+08:00","level":"INFO","msg":"文件已存在，无需重复上传"}

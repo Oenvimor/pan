@@ -20,7 +20,8 @@ type Mysql struct {
 }
 
 type Server struct {
-	Port int `mapstructure:"port"`
+	Port int    `mapstructure:"port"`
+	Path string `mapstructure:"path"`
 }
 
 func InitConfig() {

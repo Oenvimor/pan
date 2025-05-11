@@ -1,5 +1,6 @@
 server:
   port: 8080
+  path: "./uploads"
 mysql:
   user: "root"
   pwd: "668904"

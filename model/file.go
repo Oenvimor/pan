@@ -19,3 +19,9 @@ type UserFile struct {
 	FileSize int64  `gorm:"column:file_size;not null" json:"file_size"`                   // 文件大小，单位为字节
 	Status   int    `gorm:"column:status;default:1" json:"status"`                        // 文件状态，1 表示正常，其他值可以用于标识删除或禁用
 }
+
+const (
+	SuccessRapidUpload = "秒传成功"
+	FailRapidUpload    = "秒传失败"
+	FileExist          = "文件已存在，无需重复上传"
+)

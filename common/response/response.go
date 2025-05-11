@@ -19,6 +19,13 @@ func OnlyMsg(c *gin.Context, msg string) {
 	})
 }
 
+func Data(c *gin.Context, msg string, data interface{}) {
+	c.JSON(http.StatusOK, model.Resp{
+		Msg:  msg,
+		Data: data,
+	})
+}
+
 func InternalServerError(c *gin.Context, msg string) {
 	c.JSON(http.StatusInternalServerError, model.Resp{
 		Msg: msg,

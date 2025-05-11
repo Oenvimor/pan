@@ -8,7 +8,8 @@ import (
 func InitService() {
 	FileController = FileControllerType{
 		Service: &service.FileService{
-			Repository: &dao.FileRepository{},
+			FileRepository:     &dao.FileRepository{},
+			UserFileRepository: &dao.UserFileRepository{},
 		},
 	}
 }

@@ -16,11 +16,12 @@ func SetUpRouter() {
 		c.String(200, "pong")
 	})
 
-	v1 := r.Group("/api/v1")
+	v := r.Group("/api/v1/file")
 	{
-		v1.POST("/file", controller.FileController.UploadFile) // 上传文件
-		v1.DELETE("/file")
-		v1.PUT("/file")
+		v.GET("", controller.FileController.ListFile)                 // 获取文件列表
+		v.POST("", controller.FileController.UploadFile)              // 上传文件
+		v.DELETE("", controller.FileController.DeleteFile)            // 删除文件
+		v.POST("/rapidUpload", controller.FileController.RapidUpload) // 秒传文件
 	}
 	r.Run(fmt.Sprintf(":%d", viper.GetInt("server.port")))
 }

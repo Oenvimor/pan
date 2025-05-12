@@ -18,4 +18,5 @@ func InitLogger(LogPath string, LogLevel slog.Level) {
 	})
 	Logger = slog.New(handler)
 	slog.SetDefault(Logger)
+
 }

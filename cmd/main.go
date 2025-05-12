@@ -2,6 +2,7 @@ package main
 
 import (
 	"log/slog"
+	rdb "pan/cache"
 	"pan/common/logger"
 	"pan/config"
 	db "pan/dao"
@@ -13,9 +14,10 @@ func main() {
 	logger.InitLogger("./log", slog.LevelDebug)
 	// 加载配置文件
 	config.InitConfig()
-	// 连接数据库
-	db.GetDB()
-	defer db.Close()
+	// 连接 MySQL
+	db.InitDB()
+	// 建立 Redis 连接池
+	rdb.InitRedisPool()
 	// 设置路由
 	router.SetUpRouter()
 }

@@ -1,4 +1,4 @@
 .idea
 uploads
-log
-config
+.log
+yaml

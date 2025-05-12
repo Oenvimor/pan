@@ -2,44 +2,41 @@ package dao
 
 import (
 	"fmt"
-	_ "github.com/go-sql-driver/mysql"
-	"github.com/jinzhu/gorm"
 	"github.com/spf13/viper"
+	"gorm.io/driver/mysql"
+	"gorm.io/gorm"
+	"gorm.io/gorm/logger"
+	"gorm.io/gorm/schema"
 	"log/slog"
 	"pan/model"
 )
 
 var DB *gorm.DB
 
-func Init() {
-	db, err := gorm.Open("mysql", fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=utf8&parseTime=True&loc=Local",
+func InitDB() *gorm.DB {
+	db, err := gorm.Open(mysql.Open(fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=utf8&parseTime=True&loc=Local",
 		viper.GetString("mysql.user"),
 		viper.GetString("mysql.pwd"),
 		viper.GetString("mysql.host"),
 		viper.GetInt("mysql.port"),
 		viper.GetString("mysql.db"),
-	))
+	)), &gorm.Config{
+		Logger: logger.Default.LogMode(logger.Info),
+		NamingStrategy: schema.NamingStrategy{
+			SingularTable: true,
+		},
+	})
 	if err != nil {
 		slog.Error("open mysql failed", "err", err)
-		return
+		return nil
 	}
 	DB = db
-	db.SingularTable(true)
 	Migration()
-}
-
-func GetDB() *gorm.DB {
-	if DB == nil {
-		Init()
-	}
 	return DB
 }
 
 func Migration() {
 	DB.AutoMigrate(&model.File{})
 	DB.AutoMigrate(&model.UserFile{})
-}
-
-func Close() {
-	DB.Close()
+	slog.Info("表迁移成功")
 }

@@ -6,6 +6,7 @@ require (
 	github.com/gin-gonic/gin v1.10.0
 	github.com/gomodule/redigo v1.9.2
 	github.com/jinzhu/gorm v1.9.16
+	github.com/lmittmann/tint v1.0.7
 	github.com/spf13/viper v1.20.1
 	gorm.io/driver/mysql v1.5.7
 	gorm.io/gorm v1.26.1

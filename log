@@ -11,3 +11,13 @@
 {"time":"2025-05-09T20:20:57.7487958+08:00","level":"ERROR","msg":"查询文件失败","err":"sql: Scan error on column index 7, name \"file_size\": converting driver.Value type float32 (\"2.507035e+06\") to a int64: invalid syntax"}
 {"time":"2025-05-09T20:20:57.7487958+08:00","level":"ERROR","msg":"文件处理出错","err":"sql: Scan error on column index 7, name \"file_size\": converting driver.Value type float32 (\"2.507035e+06\") to a int64: invalid syntax"}
 {"time":"2025-05-09T20:21:43.8806415+08:00","level":"INFO","msg":"文件已存在，无需重复上传"}
+{"time":"2025-05-12T12:15:34.0622134+08:00","level":"INFO","msg":"表迁移成功"}
+{"time":"2025-05-12T12:15:34.0627182+08:00","level":"INFO","msg":"Redis 测试通过"}
+{"time":"2025-05-12T12:26:10.1011954+08:00","level":"INFO","msg":"表迁移成功"}
+{"time":"2025-05-12T12:26:10.1016998+08:00","level":"INFO","msg":"Redis 测试通过"}
+{"time":"2025-05-12T12:37:56.0124246+08:00","level":"INFO","msg":"表迁移成功"}
+{"time":"2025-05-12T12:37:56.0129817+08:00","level":"INFO","msg":"Redis 测试通过"}
+{"time":"2025-05-12T12:39:36.8335814+08:00","level":"INFO","msg":"表迁移成功"}
+{"time":"2025-05-12T12:39:36.8341043+08:00","level":"INFO","msg":"Redis 测试通过"}
+{"time":"2025-05-12T12:41:40.4372357+08:00","level":"INFO","msg":"表迁移成功"}
+{"time":"2025-05-12T12:41:40.4377496+08:00","level":"INFO","msg":"Redis 测试通过"}

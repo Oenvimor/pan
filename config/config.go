@@ -10,6 +10,7 @@ var Cfg = &Config{}
 type Config struct {
 	MysqlConfig  *Mysql  `mapstructure:"mysql"`
 	ServerConfig *Server `mapstructure:"server"`
+	RedisConfig  *Redis  `mapstructure:"redis"`
 }
 
 type Mysql struct {
@@ -22,6 +23,16 @@ type Mysql struct {
 type Server struct {
 	Port int    `mapstructure:"port"`
 	Path string `mapstructure:"path"`
+}
+
+type Redis struct {
+	Host        string `mapstructure:"host"`
+	Port        int    `mapstructure:"port"`
+	Pwd         string `mapstructure:"pwd"`
+	Db          int    `mapstructure:"db"`
+	MaxIdle     int    `mapstructure:"max_idle"`
+	MaxActive   int    `mapstructure:"max_active"`
+	IdleTimeout int    `mapstructure:"idle_timeout"`
 }
 
 func InitConfig() {
